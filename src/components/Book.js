@@ -13,6 +13,7 @@ export default class Book extends React.Component {
                 <li><Link to="/bookinstance">From Book to Book Instance </Link>   </li>
                 </ul>
                 {console.log('book this props:'+JSON.stringify( this.props))} 
+                
             </div>
         );
 

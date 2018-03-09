@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-export default class SearchContact extends React.Component {
+class SearchContact extends React.Component {
 
     submitContact = (e) => {
         this.props.history.push("/book");
@@ -11,15 +11,15 @@ export default class SearchContact extends React.Component {
     render() {
         return (
             <div>
+                <h1>Search Contact</h1>
                 <div>
                     <input type='text' name='search' />
                 </div>
-                <button onClick={this.submitContact}>Search</button>
-                <div><Link to="/author">Author</Link></div>
+                <button onClick={this.submitContact}>Search</button>                
             </div>
         );
 
     }
 }
 
-// export default withRouter(SearchContact);
+export default withRouter(SearchContact);

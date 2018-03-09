@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchContact from './SearchContact';
+import {Link} from 'react-router-dom';
 
 export default class Home extends React.Component {
     render() {
@@ -9,7 +10,12 @@ export default class Home extends React.Component {
                     Reminders filled in later
                 </div>
                 <div>
-                    <SearchContact/>
+                    <ul>
+                        <li><Link to='/searchcontact'>Search Contact </Link> </li>
+                        <li><Link to='/author'>Search Author </Link> </li>
+                     </ul>   
+                </div>
+                <div>
                 </div>    
             </div>
         );
