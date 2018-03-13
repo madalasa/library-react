@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchContact from './SearchContact';
+// import SearchContact from './SearchContact';
 import {Link} from 'react-router-dom';
 
 export default class Home extends React.Component {
@@ -11,12 +11,10 @@ export default class Home extends React.Component {
                 </div>
                 <div>
                     <ul>
-                        <li><Link to='/searchcontact'>Search Contact </Link> </li>
+                        <li><Link to='/book'>Search Book </Link> </li>
                         <li><Link to='/author'>Search Author </Link> </li>
                      </ul>   
                 </div>
-                <div>
-                </div>    
             </div>
         );
     }

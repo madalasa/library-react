@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from '../components/Home';
-import SearchContact from '../components/SearchContact'
+import SearchBook from '../components/SearchBook'
 import SearchAuthor from '../components/SearchAuthor'
-import Book from '../components/Book'
+// import Book from '../components/Book'
 import BookInstance from '../components/BookInstance'
 import Author from '../components/Author'
 
@@ -30,12 +30,10 @@ let AppLayout = function (props) {
       <main>
 
         <Route path="/" component={Home} />
-        
-        <Route path="/searchcontact" component={SearchContact} />
-        <Route path="/author" component={SearchAuthor} />
-        {/* <Route path="/book" component={Book} /> */}
+        <Route path="/book" component={SearchBook} />
+        <Route path="/author" component={SearchAuthor} />      
         <Route path="/bookinstance" component={BookInstance} />
-
+        
       </main>
       <Footer />
     </div>

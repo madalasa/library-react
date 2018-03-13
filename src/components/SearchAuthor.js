@@ -1,6 +1,6 @@
 import React from 'react';
 import Author from './Author';
-import {Route, Link} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 
 export default class SearchAuthor extends React.Component {
     submitContact = (e) => {
@@ -11,12 +11,16 @@ export default class SearchAuthor extends React.Component {
     render() {
         return (
             <div>
+            <div>
                 <h1> Search Author</h1>
                 <div>
                     <input type='text' name='search'/>
                 </div>
-                <button onClick={this.submitContact}>Search</button>
+                <button onClick={this.submitContact}>Search</button>                
+            </div>
+            <div>
                 <Route path="/author/2" component={Author} />
+            </div>        
             </div>
         );
 
