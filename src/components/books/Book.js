@@ -1,9 +1,7 @@
 
 import React from 'react';
-import axios from 'axios';
-
+import {findBook} from '../../xhr/library-client';
 // import BookInstance from './BookInstance';
-// import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export default class Book extends React.Component {
@@ -17,10 +15,6 @@ export default class Book extends React.Component {
             genre: '',
             description: ''
         }
-    }
-
-    findBook = (id) => {
-        return axios.get('http://localhost:3500/catalog/books/' + id);
     }
 
     getAuthor = (author) => {
@@ -44,7 +38,7 @@ export default class Book extends React.Component {
 
     componentDidMount = () => {
         let bookId = this.props.match.params.bookId;
-        let bookPromise = this.findBook(bookId);
+        let bookPromise = findBook(bookId);
 
         bookPromise.then(di => {
             console.log('books from axios:' + JSON.stringify(di.data.book));

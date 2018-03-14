@@ -1,25 +1,15 @@
 import React from 'react';
+import Search from '../common/Search';
 // import Author from './Author';
 // import {Route} from 'react-router-dom';
 
 export default class SearchAuthor extends React.Component {
-    submitContact = (e) => {
-        console.log('In submit moving to book'+e.target+", "+this.props.history);
-        this.props.history.push("/author/2");
+    submitContact= (e, textValue) => {
+        console.log('In submit moving to author: '+textValue);
+        this.props.history.push("/author/"+textValue);
     }
 
     render() {
-        return (
-            <div>
-            <div>
-                <h1> Search Author</h1>
-                <div>
-                    <input type='text' name='search'/>
-                </div>
-                <button onClick={this.submitContact}>Search</button>                
-            </div>
-            </div>
-        );
-
+        return <Search heading='Search Author' submitContact={this.submitContact}/>
     }
 }
