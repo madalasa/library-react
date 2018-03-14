@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import Book from '../components/Book';
+// import { Route } from 'react-router-dom';
+// import Book from './Book';
 
 export default class SearchBook extends React.Component {
 
@@ -20,7 +20,7 @@ export default class SearchBook extends React.Component {
 
     render() {
         return (
-            <div>
+ 
             <div>
                 <h1>Search Book</h1>
                 <div>                
@@ -29,10 +29,7 @@ export default class SearchBook extends React.Component {
                 </div>
                 <button onClick={this.submitContact}>Search</button>                                
             </div>
-            <div>
-                <Route path="/book/:bookId" component={Book}/>
-            </div>
-            </div>    
+ 
         );
 
     }
