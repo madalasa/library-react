@@ -3,7 +3,7 @@ import Home from '../components/Home';
 import SearchBook from '../components/books/SearchBook'
 import SearchAuthor from '../components/authors/SearchAuthor'
  import Book from '../components/books/Book'
-// import Author from '../components/authors/Author'
+import Author from '../components/authors/Author'
 
 import {
   Route, Link
@@ -18,9 +18,10 @@ const Header = () => (
 
 const Navigation = () => (
 <div>
-  <Link to='/'>Home</Link>
-  <Link to='/book'>Books</Link>
-  <Link to='/author'>Authors</Link>
+  <Link to='/'><button>Home</button></Link>
+  <Link to='/book'><button>Books</button></Link>
+
+  <Link to='/author'><button>Authors</button></Link>
 </div>
 )
 
@@ -43,7 +44,7 @@ let AppLayout = function (props) {
           <Route exact path="/book" component={SearchBook} />
           <Route path="/book/:bookId" component={Book}/>
           <Route exact path="/author" component={SearchAuthor} />
-          
+          <Route path="/author/:authorId" component={Author} />
       </main>
       <Footer />
     </div>
